@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hub de Leitura: API com Cypress | Enzo Coelho</title>
+  <meta name="description" content="Estudo de caso: automação de API com Cypress em um sistema de biblioteca, com validação de permissões por perfil e relatórios Allure no GitHub Actions.">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <a class="skip" href="#conteudo">Ir para o conteúdo</a>
+  <header class="nav">
+    <div class="wrap">
+      <a class="brand" href="../index.html">enzo<span>.qa</span></a>
+      <nav aria-label="Principal">
+        <ul>
+          <li><a href="../index.html#projetos">← Todos os projetos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="proj-hero">
+      <div class="wrap">
+        <a class="back" href="../index.html#projetos">← Voltar aos projetos</a>
+        <span class="eyebrow">Estudo de caso · Automação de API</span>
+        <h1>Hub de Leitura: API com Cypress</h1>
+        <p class="lead">Testes automatizados de API em um sistema de biblioteca, com foco no que mais quebra em produto real: regras de negócio e quem pode fazer o quê.</p>
+        <div class="tags"><span class="chip">Cypress</span><span class="chip">Allure Report</span><span class="chip">GitHub Actions</span><span class="chip">Autorização por perfil</span></div>
+        <div class="cta">
+          <a class="btn primary" href="https://github.com/enzoacoelho/cy-api-hub-de-leitura">Ver repositório ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="proj-body">
+      <div class="wrap proj-layout">
+        <article>
+          <h2>Contexto</h2>
+          <p>O Hub de Leitura é um sistema de biblioteca com usuários de perfis diferentes. Em sistemas assim, o risco maior costuma estar na API: uma regra de negócio mal aplicada ou uma permissão que vaza dá acesso indevido a quem não deveria.</p>
+
+          <h2>O que foi testado</h2>
+          <ul>
+            <li><strong>Regras de negócio</strong> da biblioteca, validadas direto na API.</li>
+            <li><strong>Autorização por perfil</strong>: o que cada tipo de usuário pode e não pode fazer, incluindo as tentativas que precisam ser bloqueadas.</li>
+          </ul>
+
+          <h2>Estratégia</h2>
+          <p>Testar pela API é mais rápido e mais estável do que pela interface, e permite cobrir cenários de permissão em volume. Por isso as regras e os perfis foram o centro da suíte.</p>
+          <div class="callout"><p>Permissão não é só "o usuário certo consegue". O teste importante é "o usuário errado não consegue".</p></div>
+
+          <h2>Pipeline e relatórios</h2>
+          <p>A execução roda no <strong>GitHub Actions</strong> e gera relatórios <strong>Allure</strong>, para que qualquer pessoa do time veja o resultado sem rodar nada localmente.</p>
+
+          <h2>Práticas que adoto nos meus projetos de automação</h2>
+          <ul>
+            <li>Comandos customizados e centralização de requisições, para evitar código duplicado.</li>
+            <li>Massa de dados com fixtures e Faker.</li>
+            <li>Mapeamento de cenários baseado em risco, guiando o que automatizar primeiro.</li>
+          </ul>
+
+          <h2>Veja o material completo</h2>
+          <p>O código, a configuração do pipeline e as instruções para rodar estão no repositório.</p>
+          <p><a class="btn primary" href="https://github.com/enzoacoelho/cy-api-hub-de-leitura">Abrir no GitHub ↗</a></p>
+
+          <div class="pager">
+            <a href="tool-shop.html">← Anterior: Tool Shop</a>
+            <a href="streaming.html">Próximo: Streaming →</a>
+          </div>
+        </article>
+
+        <aside class="aside">
+          <div class="box">
+            <h3>Resumo</h3>
+            <dl>
+              <div><dt>Tipo</dt><dd>Automação de API</dd></div>
+              <div><dt>Aplicação</dt><dd>Sistema de biblioteca</dd></div>
+              <div><dt>Foco</dt><dd>Regras de negócio e permissões por perfil</dd></div>
+              <div><dt>Stack</dt><dd>Cypress, Allure, GitHub Actions</dd></div>
+            </dl>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© <span id="year">2026</span> Enzo Coelho · <a href="../index.html">Voltar ao início</a></div>
+  </footer>
+  <script src="../assets/main.js"></script>
+</body>
+</html>
