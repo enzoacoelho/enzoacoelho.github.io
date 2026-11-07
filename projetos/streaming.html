@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Streaming: E2E com Playwright | Enzo Coelho</title>
+  <meta name="description" content="Estudo de caso: testes E2E com Playwright e JavaScript em uma plataforma de streaming, cobrindo login, leads e catálogo, com integração a PostgreSQL.">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <a class="skip" href="#conteudo">Ir para o conteúdo</a>
+  <header class="nav">
+    <div class="wrap">
+      <a class="brand" href="../index.html">enzo<span>.qa</span></a>
+      <nav aria-label="Principal">
+        <ul>
+          <li><a href="../index.html#projetos">← Todos os projetos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="proj-hero">
+      <div class="wrap">
+        <a class="back" href="../index.html#projetos">← Voltar aos projetos</a>
+        <span class="eyebrow">Estudo de caso · Web E2E</span>
+        <h1>Streaming: E2E com Playwright</h1>
+        <p class="lead">Testes de ponta a ponta numa plataforma de streaming, cobrindo os fluxos que o usuário realmente percorre e conferindo o resultado no banco de dados.</p>
+        <div class="tags"><span class="chip">Playwright</span><span class="chip">JavaScript</span><span class="chip">PostgreSQL</span><span class="chip">E2E</span></div>
+        <div class="cta">
+          <a class="btn primary" href="https://github.com/enzoacoelho/pw-streaming">Ver repositório ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="proj-body">
+      <div class="wrap proj-layout">
+        <article>
+          <h2>Contexto</h2>
+          <p>A aplicação é a plataforma de streaming Zombie Plus, usada como alvo de testes E2E. A proposta foi automatizar os fluxos principais com Playwright e JavaScript, de forma que a suíte fosse legível e fácil de manter.</p>
+
+          <h2>O que foi testado</h2>
+          <ul>
+            <li><strong>Login</strong>, com cenários de sucesso e de falha.</li>
+            <li><strong>Leads</strong>, o cadastro de interessados na plataforma.</li>
+            <li><strong>Catálogo</strong>, a área principal de conteúdo.</li>
+          </ul>
+
+          <h2>Estratégia</h2>
+          <p>Automatizei os fluxos mais usados pelo usuário e integrei a suíte ao <strong>PostgreSQL</strong>, para preparar e conferir dados diretamente no banco em vez de depender só do que aparece na tela.</p>
+          <div class="callout"><p>Conferir o banco além da interface deixa o teste mais confiável: a tela pode mostrar sucesso sem que o dado tenha sido gravado.</p></div>
+
+          <h2>Veja o material completo</h2>
+          <p>Os testes, a estrutura do projeto e as instruções para rodar estão no repositório.</p>
+          <p><a class="btn primary" href="https://github.com/enzoacoelho/pw-streaming">Abrir no GitHub ↗</a></p>
+
+          <div class="pager">
+            <a href="hub-de-leitura.html">← Anterior: Hub de Leitura</a>
+            <a href="../index.html#projetos">Todos os projetos →</a>
+          </div>
+        </article>
+
+        <aside class="aside">
+          <div class="box">
+            <h3>Resumo</h3>
+            <dl>
+              <div><dt>Tipo</dt><dd>Automação web E2E</dd></div>
+              <div><dt>Aplicação</dt><dd>Plataforma de streaming</dd></div>
+              <div><dt>Fluxos</dt><dd>Login, leads e catálogo</dd></div>
+              <div><dt>Stack</dt><dd>Playwright, JavaScript, PostgreSQL</dd></div>
+            </dl>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© <span id="year">2026</span> Enzo Coelho · <a href="../index.html">Voltar ao início</a></div>
+  </footer>
+  <script src="../assets/main.js"></script>
+</body>
+</html>
