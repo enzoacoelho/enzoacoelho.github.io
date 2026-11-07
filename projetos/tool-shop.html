@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tool Shop: testes manuais | Enzo Coelho</title>
+  <meta name="description" content="Estudo de caso: testes manuais e exploratórios em um e-commerce de ferramentas, com análise de risco, matriz de rastreabilidade e relatórios de bugs.">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <a class="skip" href="#conteudo">Ir para o conteúdo</a>
+  <header class="nav">
+    <div class="wrap">
+      <a class="brand" href="../index.html">enzo<span>.qa</span></a>
+      <nav aria-label="Principal">
+        <ul>
+          <li><a href="../index.html#projetos">← Todos os projetos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="proj-hero">
+      <div class="wrap">
+        <a class="back" href="../index.html#projetos">← Voltar aos projetos</a>
+        <span class="eyebrow">Estudo de caso · Teste manual</span>
+        <h1>Tool Shop: testes manuais e exploratórios</h1>
+        <p class="lead">Um e-commerce de ferramentas testado como se fosse um produto real: primeiro o risco, depois os cenários, e tudo rastreável até o bug.</p>
+        <div class="tags"><span class="chip">Jira</span><span class="chip">Zephyr Scale</span><span class="chip">Testes exploratórios</span><span class="chip">Matriz de rastreabilidade</span></div>
+        <div class="cta">
+          <a class="btn primary" href="https://github.com/enzoacoelho/qa-manual-toolshop">Ver repositório ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="proj-body">
+      <div class="wrap proj-layout">
+        <article>
+          <h2>Contexto</h2>
+          <p>A aplicação testada é o "Practice Software Testing - Tool Shop", um e-commerce de ferramentas com catálogo, carrinho, checkout e conta de usuário. O objetivo foi montar uma suíte de testes manuais completa, no formato que um time usaria no dia a dia, e não apenas uma lista de casos soltos.</p>
+
+          <h2>O que foi testado</h2>
+          <ul>
+            <li><strong>Testes funcionais</strong> dos fluxos principais da loja.</li>
+            <li><strong>Testes exploratórios</strong>, para encontrar o que os casos escritos não preveem.</li>
+            <li><strong>Cenários de borda</strong>, principalmente no checkout, onde um erro tem custo mais alto para o negócio.</li>
+          </ul>
+
+          <h2>Estratégia</h2>
+          <p>Comecei pela análise de risco: quais áreas do sistema causam mais dano se falharem. Isso definiu onde gastar mais tempo de teste, em vez de distribuir esforço por igual.</p>
+          <div class="callout"><p>Foco em risco e em cenários de borda no checkout: é onde o usuário paga e onde um bug vira prejuízo.</p></div>
+
+          <h2>Artefatos produzidos</h2>
+          <ul>
+            <li><strong>Matriz de rastreabilidade</strong>, ligando requisitos, casos de teste e defeitos.</li>
+            <li><strong>Ciclos de execução</strong>, com planejamento e acompanhamento dos resultados.</li>
+            <li><strong>Relatórios de bugs</strong>, com evidências visuais para o dev reproduzir sem perguntar nada.</li>
+          </ul>
+
+          <h2>Ferramentas</h2>
+          <p>Gestão dos casos e dos ciclos no <strong>Zephyr Scale</strong> e registro de defeitos no <strong>Jira Cloud</strong>, o mesmo fluxo usado em muitos times de produto.</p>
+
+          <h2>Veja o material completo</h2>
+          <p>Os casos de teste, a matriz e os relatórios de bugs com evidências estão no repositório do projeto.</p>
+          <p><a class="btn primary" href="https://github.com/enzoacoelho/qa-manual-toolshop">Abrir no GitHub ↗</a></p>
+
+          <div class="pager">
+            <a href="../index.html#projetos">← Todos os projetos</a>
+            <a href="hub-de-leitura.html">Próximo: Hub de Leitura →</a>
+          </div>
+        </article>
+
+        <aside class="aside">
+          <div class="box">
+            <h3>Resumo</h3>
+            <dl>
+              <div><dt>Tipo</dt><dd>Teste manual e exploratório</dd></div>
+              <div><dt>Aplicação</dt><dd>E-commerce de ferramentas (Practice Software Testing)</dd></div>
+              <div><dt>Foco</dt><dd>Risco e cenários de borda no checkout</dd></div>
+              <div><dt>Gestão</dt><dd>Jira Cloud e Zephyr Scale</dd></div>
+            </dl>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© <span id="year">2026</span> Enzo Coelho · <a href="../index.html">Voltar ao início</a></div>
+  </footer>
+  <script src="../assets/main.js"></script>
+</body>
+</html>
