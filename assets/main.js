@@ -14,13 +14,14 @@ if (toggle && menu) {
   );
 }
 
-// Filtro de projetos por categoria
+// Abas de projetos por categoria (um card pode estar em mais de uma categoria)
 const filters = document.querySelectorAll(".filter");
 const cards = document.querySelectorAll("#todos .card");
+const inCat = (card, cat) => (card.dataset.cat || "").split(/\s+/).includes(cat);
 
 function applyFilter(cat) {
   cards.forEach((card) => {
-    card.hidden = !(cat === "todos" || card.dataset.cat === cat);
+    card.hidden = !inCat(card, cat);
   });
   filters.forEach((f) => f.setAttribute("aria-pressed", String(f.dataset.filter === cat)));
 }
@@ -29,12 +30,14 @@ filters.forEach((btn) => btn.addEventListener("click", () => applyFilter(btn.dat
 
 // Contagem em cada botão
 filters.forEach((btn) => {
-  const cat = btn.dataset.filter;
-  const n = cat === "todos" ? cards.length : [...cards].filter((c) => c.dataset.cat === cat).length;
+  const n = [...cards].filter((c) => inCat(c, btn.dataset.filter)).length;
   const small = document.createElement("small");
   small.textContent = n;
   btn.appendChild(small);
 });
+
+// Começa na primeira aba
+if (filters.length) applyFilter(filters[0].dataset.filter);
 
 // Ano no rodapé
 const year = document.querySelector("#year");
